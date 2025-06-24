@@ -47,6 +47,7 @@ tput cnorm
 }
 clear
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ───────────────── /// ────────────────── ${YELLOW}"
+snap install figlet
 figlet -p -f slant SlowDNS
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ────────────── Installer ─────────────── ${YELLOW}"
 echo -e ""
