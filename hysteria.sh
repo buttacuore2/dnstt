@@ -101,11 +101,11 @@ iptables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev
 ip6tables -t nat -A PREROUTING -i $(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1) -p udp --dport 20000:50000 -j DNAT --to-destination :1080
 
 sysctl net.ipv4.conf.all.rp_filter=0 
-sysctl net.ipv4.conf.eth0.rp_filter=0 
+sysctl net.ipv4.conf.$(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1).rp_filter=0 
 
 echo "net.ipv4.ip_forward = 1 
 net.ipv4.conf.all.rp_filter=0 
-net.ipv4.conf.eth0.rp_filter=0" > /etc/sysctl.conf 
+net.ipv4.conf.$(ip -4 route ls|grep default|grep -Po '(?<=dev )(\S+)'|head -1).rp_filter=0" > /etc/sysctl.conf 
 
 sysctl -p 
 echo iptables-persistent iptables-persistent/autosave_v4 boolean true | sudo debconf-set-selections 
