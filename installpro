@@ -53,9 +53,9 @@ echo -e "DOWNLOADING DEPENDENCIES...\n"
 apt install ncurses-bin -y > /dev/null 2>&1
 mkdir -p /etc/slowdns
 cd /etc/slowdns
-base_url="https://raw.githubusercontent.com/powermx/dnstt/main"
+base_url="https://raw.githubusercontent.com/buttacuore2/dnstt/main"
 
-wget -q https://github.com/powermx/dnstt/raw/main/dns-server -O dns-server && chmod +x dns-server
+wget -q https://github.com/buttacuore2/dnstt/raw/main/dns-server -O dns-server && chmod +x dns-server
 
 for file in \
   remove-slow slowdns-info slowdns-drop slowdns-ssh slowdns-ssl \
