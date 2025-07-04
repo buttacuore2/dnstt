@@ -9,7 +9,7 @@ SSL_ID=ssl@powermx.org
 MYIP=$(wget -qO- icanhazip.com);
 server_ip=$(curl -s https://api.ipify.org)
 
-timedatectl set-timezone Asia/Riyadh
+timedatectl set-timezone Africa/Casablanca
 
 install_require () {
 clear
