@@ -1,5 +1,5 @@
 #!/bin/bash
-#SlowDNS @PowerMX
+#SlowDNS @buttacuore
 # Definir variables para colores de texto
 IP=$(curl -s -4 icanhazip.com)
 HOST=`hostname`;
@@ -25,9 +25,9 @@ slowdns () {
 tput reset
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ───────────────── /// ────────────────── ${YELLOW}"
 figlet -p -f slant SlowDNS
-echo -e "${GRAY}[${RED}-${GRAY}]${RED} ────────── Mod SlowDNS VpsPack ───────── ${YELLOW}"
-echo -e "${GRAY}[${RED}-${GRAY}]${RED} ──          Telegram: @VPNMX          ── ${YELLOW}"
-echo -e "${GRAY}[${RED}-${GRAY}]${RED} ──              @PowerMX              ── ${YELLOW}"
+echo -e "${GRAY}[${RED}-${GRAY}]${RED} ────────── Mod SlowDNS  ───────── ${YELLOW}"
+echo -e "${GRAY}[${RED}-${GRAY}]${RED} ──          Telegram: @buttacuore         ── ${YELLOW}"
+echo -e "${GRAY}[${RED}-${GRAY}]${RED} ──              @ssltunnel              ── ${YELLOW}"
 echo -e "${GRAY}[${RED}-${GRAY}]${RED} ───────────────── /// ────────────────── ${RESET}"
 echo -e "${YELLOW}SERVER IP: ${WHITE}$IP\033[0m "
 echo -e "${YELLOW}HOSTNAME: ${WHITE}$HOST\033[0m "
@@ -142,7 +142,7 @@ Option10 () {
 
 Option11 () {
     clear
-    wget https://raw.githubusercontent.com/powermx/dnstt/main/update
+    wget https://raw.githubusercontent.com/buttacuore2/dnstt/main/update
     chmod +x update
     bash update
 }
