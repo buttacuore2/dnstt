@@ -4,7 +4,7 @@
 echo ""
 read -rp "Add Subdomain/Tambah Subdomain: " -e host
 echo ""
-DOMAIN = $host
+echo "$host" > /root/domain
 MYIP=$(wget -qO- icanhazip.com);
 server_ip=$(curl -s https://api.ipify.org)
 
@@ -68,7 +68,6 @@ clear
 echo "Installing letsencrypt."
 {
 apt remove apache2 -y
-echo "$host" > /root/domain
 domain=$(cat /root/domain)
 curl  https://get.acme.sh | sh
 ~/.acme.sh/acme.sh --register-account -m firenetdev@gmail.com --server zerossl
