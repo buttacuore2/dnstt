@@ -1,11 +1,10 @@
 #!/bin/sh
 
 #Do not forget to set this variables
-DOMAIN=udpserv.powermx.org
-CF_ID=info@powermx.org
-CF_KEY=54578812da59c595d6e83fa90022544888fae
-CF_ZONE=695a6007808a2b1a03e505235e5f4dd9
-SSL_ID=ssl@powermx.org
+echo ""
+read -rp "Add Subdomain/Tambah Subdomain: " -e host
+echo ""
+DOMAIN = $host
 MYIP=$(wget -qO- icanhazip.com);
 server_ip=$(curl -s https://api.ipify.org)
 
@@ -69,7 +68,7 @@ clear
 echo "Installing letsencrypt."
 {
 apt remove apache2 -y
-echo "$DOMAIN" > /root/domain
+echo "$host" > /root/domain
 domain=$(cat /root/domain)
 curl  https://get.acme.sh | sh
 ~/.acme.sh/acme.sh --register-account -m firenetdev@gmail.com --server zerossl
