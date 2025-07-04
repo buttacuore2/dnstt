@@ -19,14 +19,13 @@ THIS IS A SCRIPT FOR AUTO INSTALLATION OF SLOWDNS (DNSTT SERVER) WITH:
 
 # Installation
 ```
-rm -rf install; apt update; wget https://github.com/powermx/dnstt/raw/main/install; chmod 777 install; ./install --start
+rm -rf install; apt update; wget https://github.com/buttacuore2/dnstt/raw/main/install; chmod 777 install; ./install --start
 
 ```
  
 
 ## Credits
 
-1. @LaelsonCG - Main
-2. @khaledagn - Mod 1
+1. @buttacuore - Main
 
-> Telegram : https://t.me/vpnmx
+> Telegram : https://t.me/ssltunnel
